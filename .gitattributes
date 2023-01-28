@@ -1,2 +1,210 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to be a Normal Person</title>
+    <style>
+      body {
+        background: linear-gradient(
+          109.6deg,
+          rgb(6, 2, 2) 32.4%,
+          rgb(137, 30, 47) 98.8%
+        );
+      }
+      h1 {
+        color: #e84a5f;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 48px;
+      }
+      h2 {
+        text-align: center;
+        color: #ffcc7d;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-weight: lighter;
+      }
+      hr {
+        margin: 30px;
+      }
+      .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        width: 100%;
+      }
+      img {
+        display: block;
+        margin: 0 auto 50px;
+        padding: 50px auto 50px;
+        border-radius: 40px;
+      }
+      .sideImage {
+        max-width: 250px;
+      }
+      p {
+        font-family: "Courier New", Courier, monospace;
+        margin: 10px 100px;
+        color: #ffbeff;
+      }
+      .normal {
+        line-height: 1.5;
+        margin-bottom: 10px;
+        padding-bottom: 0px;
+      }
+      .Gus {
+        margin: 50px 0px;
+        padding-top: 0px;
+        font-size: 14px;
+      }
+      .quote {
+        color: #ffbeff;
+        margin: 10px 100px;
+        padding-bottom: 20px;
+      }
+      a {
+        color: #ffbeff;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 20px 20px 50px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      div {
+        color: #ffcc7d;
+        margin: 0px 0px 20px;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+      }
+      .emoji {
+        font-size: 30px;
+      }
+
+      button {
+        background-color: #ffbeff;
+        color: #391942;
+        font-size: 20px;
+        display: block;
+        margin: 0 auto 100px;
+        padding: 20px;
+        border: #ffbeff;
+        border-radius: 30px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.8;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>How to be a Normal Person</h1>
+    <h2>A wonderful book by TJ Klune</h2>
+    <hr />
+    <div class="images">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/914/original/HtbaNP.jpg?1674380484"
+        alt="How to be a Normal Person 1"
+        class="sideImage"
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/819/original/HowToBeANormalPerson.jpg?1674315507"
+        alt="How to be a Normal Person 2"
+        class="mainImage"
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/915/original/HtbaNP_001.jpg?1674380680"
+        alt="How to be a Normal Person 2"
+        class="sideImage"
+      />
+    </div>
+
+    <p class="normal">
+      He didn’t want to be abnormal and weird and strange.
+      <strong
+        >"He wanted to be like everyone else. Not abnormal, but normal.</strong
+      >
+      Not weird, but normal. Not strange, but normal. But in the end he realised
+      he didn't need to change." <br /><br />
+      This is Gustavo Tiberius:
+      <br />
+      <br />
+      <em class="Gus">
+        “But that’s really it. I’m Gus. I work in a video store that no one
+        really goes to. I own some buildings. I have a pet ferret. I read an
+        inspirational message off a calendar every morning even though I don’t
+        want to. My friends are all two times my age or more. I read
+        encyclopedias. I miss my dad. And I think I might worship the ground
+        Casey walks on. That’s it. That’s who I am.”</em
+      >
+    </p>
+    <span class="quote">
+      in <em>How to be a Normal Person</em> by Tj Klune</span
+    >
+    <a
+      href="https://www.goodreads.com/book/show/48706789-how-to-be-a-normal-person"
+      target="_blank"
+    >
+      More info on Goodreads
+    </a>
+    <div>
+      If you want to meet Gus and know if he turned out a normal person please
+      subscribe
+      <div class="emoji">👽👇</div>
+    </div>
+    <button>Subscribe for more</button>
+
+    <script>
+      let name;
+      let age;
+      function askName() {
+        name = prompt("What is your name?").trim();
+        if (name === null || name === "") {
+          alert("You need to add your name to subscribe");
+        } else {
+          askAge();
+        }
+      }
+      function askAge() {
+        age = prompt("How old are you?").trim();
+        if (age === null || age === "") {
+          alert("You need to add your age to subscribe");
+        } else if (age >= 18) {
+          askEmail();
+        } else {
+          alert(
+            "🙁 Hi " +
+              name +
+              ", I'm sorry but you're not old enough to subscribe yet "
+          );
+        }
+        function askEmail() {
+          let email = prompt("what's your email address?").trim();
+
+          if (email === null || email === "") {
+            subscribeButton.innerHTML = "Try again";
+            alert("You need to enter a valid email address! Try again");
+          } else {
+            subscribeButton.innerHTML = "Subscribed";
+            let h1 = document.querySelector("h1");
+            h1.innerHTML = "Hi " + name + "! Thank you for subscribing";
+          }
+        }
+      }
+
+      let subscribeButton = document.querySelector("button");
+      subscribeButton.addEventListener("click", askName);
+    </script>
+  </body>
+</html>
